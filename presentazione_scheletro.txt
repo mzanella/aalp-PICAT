@@ -1,0 +1,104 @@
+1-PRIMA
+PICAT analisi del linguaggio
+marco zanella 1155185
+aspetti avanzati linguaggi di programmazione
+
+************************************************************************
+
+2-INDICE
+
+informazioni generali
+caratteristiche
+...
+
+************************************************************************
+
+3-INFORMAZIONI GENERALI
+
+(LOGO)
+- PICAT ->Pattern-matching
+		  Intuitive(Imperative)
+		  Constraints
+		  Actors
+		  Tabling 
+
+- Neng-Fa Zhou, professore di informatica del Brooklyn College (FOTO)
+- prima versione (beta) 2013 -> formalizzato un anno prima
+- sviluppato in ambito accademico 
+- problemi relativi all'intelligenza artificiale
+- influenzato da molti linguaggi differenti e molti paradigmi di programmazione
+- abbastanza sconosciuto 
+	> no TIOBE index (http://www.tiobe.com/tiobe-index/)
+	> no PYPL (http://pypl.github.io/PYPL.html)
+
+************************************************************************
+
+4-MULTI PARADIGMA
+
+- Programmazione logica 
+- Programmazione imperativa
+- Programmazione funzionale
+- Linguaggio di scripting
+
+************************************************************************
+
+5-Programmazione logica
+
+- Predicati basati su regole 
+- Backtracking
+- Unification
+
+************************************************************************
+
+6-Programmazione imperativa - 1
+
+Unione di concetti della programmazione logica con quella imperativa 
+	> assegnamenti e side-effects
+	> cicli 
+	>if-then-else
+
+************************************************************************
+
+7-Programmazione imperativa - 2
+
+"The purpose of Picat is to bridge the gap between imperative languages, 
+which tell the computer how things should be done, and declarative 
+languages, which tell the computer what to do, without detailing how it 
+should be done"
+
+************************************************************************
+
+Esempio con programmazione imperativa
+
+(dall'esempio possiamo notare come picat ci permetta di effettuare 
+il ciclo foreach che in questo caso è utilizzato come un for, l'assegnazione
+e i side effect poichè la lista X verrà modificata all'interno della funzione
+e successivamente quando viene ri-stampata avrà un valore aggiornato, inoltre
+c'è anche un esempio di costrutto if-then-else)
+
+************************************************************************
+
+8-Programmazione funzionale
+
+- Pattern matching
+- Facilità manipolare liste
+	> map, fold, apply...
+
+
+************************************************************************
+
+9-Linguaggi di scripting
+
+- interprete a linea di comando
+- type checking dinamico
+- flessibilità e brevità rispetto all'efficienza
+
+************************************************************************
+
+RIFERIMENTI
+
+Constraint solving and planning with Picat, N.F. Zhou, H. Kjellerstrand, J. Fruhman
+Documentazione Picat
+http://www.hakank.org/picat/
+https://it.wikipedia.org/wiki/Picat
+http://picat-lang.org/

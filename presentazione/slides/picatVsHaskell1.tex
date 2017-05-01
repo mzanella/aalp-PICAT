@@ -1,0 +1,41 @@
+\iffalse
+Poichè PICAT presenta alcune funzionalità riconducibili ai linguaggi lo possiamo confrontare con un linguaggio prettamente funzionale come Haskell. Le analogie tra i due linguaggi sono praticamente tutti gli aspetti funzionali di PICAT ovvero: pattern matching, list comprehension, funzioni higher order che però in PICAT sono sconsigliate mentre in haskell ovviamente no ed in entrambi i linguaggi i side effects sono scoraggiati.
+Le differenze sono che nel il primo è staticamente tipato a differenza del secondo: in haskell infatti quando viene eseguito un programma tutto ha un certo tipo mentre in PICAT è possibile riassegnare una certa variabile a tipi differenti.
+Infine PICAT non prevede l'utilizzo della lazy evaluation, che permette per esempio ad haskell di gestire liste infinite, mentre PICAT no, infatti ogni termine deve essere completamente valutato per esempio prima di essere passato come parametro ad una funzione. Comunque è possibile in qualche modo simularla tramite il costrutto freeze che permette di posticipare la valutazione di un termine
+\fi
+
+\begin{frame}{PICAT vs Haskell - 1}
+	
+	\begin{columns}
+
+		\begin{column}{1\textwidth}
+
+			Analogie
+			\begin{itemize}
+				\item Funzioni definite con pattern matching
+				\item Supporto funzioni higher order (call, apply, map, foldl...)
+				\item List comprehension
+				\item Side effect scoraggiati
+			\end{itemize}
+
+			Differenze
+			\begin{itemize}
+				\item Dinamicamente tipato
+				\item No lazy evaluation
+				\item L'utilizzo delle funzioni higher order è scoraggiato
+			\end{itemize}
+
+		\end{column}
+
+		\begin{column}{0.1\textwidth}
+			\begin{figure}
+				\vspace*{-5cm}
+				\hspace*{-2cm}
+				\includegraphics[scale=0.1]{res/haskellLogo}
+			\end{figure}
+		\end{column}
+
+	\end{columns}
+	
+\end{frame}
+

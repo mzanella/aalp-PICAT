@@ -1,0 +1,10 @@
+fun() =>
+	X = get_global_map(0),
+	println(X.get(2)),
+	X.put(1, val1modified).
+
+main =>
+	X = get_global_map(0),
+	X.put(1, val1), X.put(2, val2), X.put(3, val3),
+	fun(),
+	println(X.get(1)).

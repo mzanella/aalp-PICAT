@@ -1,0 +1,52 @@
+\documentclass[aspectratio=43]{beamer}
+
+\usetheme{Padova}
+\usepackage[utf8x]{inputenc}
+\usepackage{listings}
+\usepackage{wrapfig}
+
+\usepackage{tikz,xparse}
+\usetikzlibrary{decorations.pathreplacing,}
+\newcommand{\tikzmark}[1]{\tikz[baseline={(#1.base)},overlay,remember picture] \node[outer sep=0pt, inner sep=0pt] (#1) {\phantom{A}};}
+
+%% syntax
+%%%\mybrace{<first>}{<second>}[<Optional text>]
+\NewDocumentCommand\mybrace{mmo}{%
+\IfValueTF {#3}{%
+\begin{tikzpicture}[overlay, remember picture,decoration={brace,amplitude=1ex}]
+  \draw[decorate,thick] (#1.north east) -- (#2.south east) node[midway, right=0.1cm] {$=$}node[midway, right=0.5cm,text=grigioPantano,text width = 1.5in,] {{#3}};
+\end{tikzpicture}%
+}%
+{%
+\begin{tikzpicture}[overlay, remember picture,decoration={brace,amplitude=1ex}]
+  \draw[decorate,thick] (#1.north east) -- (#2.south east);
+\end{tikzpicture}%
+}%
+}%
+
+\usepackage{subfigure}
+
+\title{PICAT \\Analisi del linguaggio}
+\author{Marco Zanella - 1155185}
+\date{22 marzo 2017}
+
+
+\begin{document}
+	\maketitle
+	\input{slides/informazioniGenerali.tex}
+	\input{slides/overview-tipi.tex}
+	\input{slides/overview-examplesCompoundTypes.tex}
+	\input{slides/overview-globalMaps.tex}
+	\input{slides/influenze.tex}
+	\input{slides/programmazioneLogica.tex}
+	\input{slides/picatVsProlog.tex}
+	\input{slides/programmazioneImperativa.tex}
+	\input{slides/programmazioneImperativaCitazione.tex}
+	\input{slides/programmazioneImperativaEsempio.tex}
+	\input{slides/programmazioneFunzionale.tex}
+	\input{slides/picatVsHaskell1.tex}
+	\input{slides/picatVsHaskell2.tex}
+	\input{slides/linguaggioDiScripting.tex}
+	\input{slides/picatVsPython.tex}
+	\input{slides/riferimenti.tex}
+\end{document}

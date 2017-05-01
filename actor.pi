@@ -1,0 +1,1 @@
+p(X), {event(X,T)} => writeln(T).

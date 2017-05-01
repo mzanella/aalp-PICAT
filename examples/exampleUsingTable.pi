@@ -1,0 +1,47 @@
+/*
+Example using table
+*/
+
+table
+fib_table(N)=F =>
+	print("|"),
+	if (N=0; N=1) then
+		F=1
+	elseif N>1 then
+		F = fib_table(N-1) + fib_table(N-2)
+	else
+		throw $error(wrong_argument,fib,N)
+	end.
+
+fib(N)=F =>
+	print("|"),
+	if (N=0; N=1) then
+		F=1
+	elseif N>1 then
+		F = fib(N-1) + fib(N-2)
+	else
+		throw $error(wrong_argument,fib,N)
+	end.
+
+main => 
+	X := 5,
+	print("Fibonacci for "), println(X),
+	print("without table:"), print(fib(X)), 
+	println(''),
+	print("with table:   "), print(fib_table(X)), 
+	
+	println(''),println(''),
+	X := 8,
+	print("Fibonacci for "), println(X),
+	print("without table:"), print(fib(X)), 
+	println(''),
+	print("with table:   "), print(fib_table(X)),
+	
+	println(''),println(''),
+	X := 8,
+	print("Fibonacci for "), println(X),
+	print("without table:"), print(fib(X)), 
+	println(''),
+	print("with table:   "), print(fib_table(X)),
+
+	println('').

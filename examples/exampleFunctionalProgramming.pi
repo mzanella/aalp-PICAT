@@ -1,0 +1,18 @@
+% Example of functional programming in Picat
+
+/*
+Quicksort in Picat
+*/
+
+quicksort([]) = [].
+quicksort([H|T]) = L ++ [H] ++ R => 
+	L = quicksort([E : E in T, E=<H]),
+	R = quicksort([E : E in T, E>H]).
+
+/*
+Quicksort in Haskell
+quicksort [] = []
+quicksort (x:xs) = l ++ [x] ++ r
+	where l = quicksort [z | z <- xs, z <= x]
+		  r = quicksort [z | z <- xs, z > x]
+*/

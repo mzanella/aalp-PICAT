@@ -1,0 +1,31 @@
+\iffalse
+Qui possiamo vedere un po' di esempi per la creazione di array, liste, strutture e mappe
+Liste e array possono essere creati elencando gli elementi, con new_list e new_array oppure con list e array comprehension
+Per creare le strutture invece è necessario anteporre il dollaro prima del nome della struttura per far capire al sistema che non si tratta di una chiamata di funzione
+le mappe si creano con la funzione new_map e poi è possibile inserire gli elementi con la funzione put e ricavarli invece con la funzione get. Nel caso venga richiesto il get da una mappa senza che tale chiave sia presente allora viene lanciata una eccezione, per evitarlo è possibile aggiungere un valore di default quando si fa la chiamata
+\fi
+
+\begin{frame}[fragile, shrink=1]{Overview - Creazione oggetti compound}
+	
+	\begin{lstlisting}
+%Esempi per la creazione di una lista
+Picat>X=[a,b,c],Y=new_list(3),Z=[Z:Z in 1..6,even(Z)]
+X = [a,b,c]
+Y = [_104c8,_104d8,_104e8]
+Z = [2,4,6]
+%Esempi per la creazione di un array
+Picat>X={a,b,c},Y=new_array(3),Z={Z:Z in 1..6,even(Z)}
+X = {a,b,c}
+Y = {_1b220,_1b228,_1b230}
+Z = {2,4,6}
+%Esempio di struttura
+Picat>X = $str(abc, 1000, a), Y=X[1]
+X = str(abc,1000,a)
+Y = abc
+%Esempio con una mappa
+Picat>X=new_map(),X.put(1, a),X.put(2, b),Y=X.get(1)
+X = (map)[1 = a,2 = b]
+Y = a
+	\end{lstlisting}
+
+\end{frame}

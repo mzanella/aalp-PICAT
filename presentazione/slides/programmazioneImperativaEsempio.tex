@@ -1,0 +1,29 @@
+\iffalse
+Qui possiamo vedere un esempio di programma in stile imperativo scritto in PICAT. Il programma inizia dal main con una lista vuota X e un numero I pari a zero. Poi viene fatto un wile inizializzando la lista e incrementando ad ogni ciclo I. Finito il ciclo viene richiamata la funzione prova modifica la lista.
+Poi la lista viene riassegnata e ancora modificata con la funzione prova
+\fi
+
+\begin{frame}[fragile, shrink=20]{Programmazione imperativa - Esempio}
+
+	\begin{lstlisting}
+% Example of imperative programming in Picat
+prova(X) =>
+	if (X.length <= 3) then
+		X[1] := -1
+	else
+		foreach (I in 1..X.length)
+			X[I] := X[I] - 2
+		end
+	end.
+main =>
+	X := [],
+	I := 0, 
+	while (I <= 5)
+		X := X ++ [I],
+		I := I + 1
+	end,
+	prova(X), println(X),
+	X := [1,2,3], prova(X), println(X).
+	\end{lstlisting}
+	
+\end{frame}

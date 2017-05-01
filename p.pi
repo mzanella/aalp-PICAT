@@ -1,0 +1,4 @@
+fun() = L => L = 2.
+
+main =>
+	println(call(fun)).

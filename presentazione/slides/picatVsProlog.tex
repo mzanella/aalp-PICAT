@@ -1,0 +1,39 @@
+\iffalse
+PICAT come linguaggi è molto simile al Prolog e difatti la prima versione di questo linguaggio riutilizza molto del codice di B-Prolog, quindi ha senso confrontare questi due linguaggi.
+Una delle differenze più importanti è che in PICAT il non determinismo deve essere previsto esplicitamente da chi scrive un determinato predicato, mentre in Prolog tutti i predicati prevedono implicitamente il backtracking (se si vuole controllare il backtracking è necessario utilizzare l'operatore cut).
+Un'altra differenza è che in PICAT la scelta del predicato da chiamare non viene fatta attraverso l'operatore di unificazione come in Prolog, bensì utilizzando il pattern matching.
+L'ultima importante è sui costrutti: infatti PICAT prevede costrutti tipici della programmazione imperativa e funzionale, come cicli, array e list comprehension,l'assegnazione, e ciò permette di esprimere più facilmente alcuni concetti
+\fi
+
+\begin{frame}[fragile]{PICAT vs Prolog}
+
+	\begin{columns}
+
+		\begin{column}{1\textwidth}
+
+			\begin{itemize}
+				\item Non determinismo esplicito
+				\item Scelta del predicato avviene tramite pattern matching
+				\item Presenza di più costrutti
+					\begin{itemize}
+						\item Cicli
+						\item Array e list comprehension
+						\item Assegnazione
+						\item Funzioni
+					\end{itemize}
+			\end{itemize}
+
+		\end{column}
+
+		\begin{column}{0.1\textwidth}
+			\begin{figure}
+				\vspace*{4cm}
+				\hspace*{-4.5cm}
+				\includegraphics[scale=0.2]{res/prologLogo}
+			\end{figure}
+		\end{column}
+
+	\end{columns}
+
+\end{frame}
+
