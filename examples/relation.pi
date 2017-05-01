@@ -1,0 +1,28 @@
+likes(sam,Food) ?=> indian(Food),mild(Food).
+likes(sam,Food) ?=> chinese(Food).
+likes(sam,Food) ?=> italian(Food).
+likes(sam,Food) ?=> Food = chips.
+
+index(+)
+indian(curry).
+indian(dahl).
+indian(tandoori).
+indian(kurma).
+
+index(+)
+mild(dahl).
+mild(tandoori).
+mild(kurma).
+
+index(+)
+chinese(chow_mein).
+chinese(chop_suey).
+chinese(sweet_and_sour).
+
+index(+)
+italian(pizza).
+italian(spaghetti).
+
+% Examples
+% likes(sam, pizza)
+% likes(sam, curry)

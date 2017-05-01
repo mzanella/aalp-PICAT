@@ -1,0 +1,4 @@
+quicksort([]) = [].							
+quicksort([H|T]) = L ++ [H] ++ R => 		
+   L = quicksort([E : E in T, E <= H]),	
+   R = quicksort([E : E in T, E > H]).

@@ -1,0 +1,9 @@
+myMemberBT(X,[Y|_]) ?=> X=Y.
+myMemberBT(X,[_|L]) => member(X,L).
+
+myMemberNBT(X,[Y|_]) => X=Y.
+myMemberNBT(X,[_|L]) => member(X,L).
+
+% Examples
+% myMemberBT(1, [10,7,1,8])
+% myMemberNBT(1, [10,7,1,8])

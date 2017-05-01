@@ -1,5 +1,4 @@
 % Example of imperative programming in Picat
-
 prova(X) =>
 	if (X.length <= 3) then
 		X[1] := -1
@@ -8,7 +7,6 @@ prova(X) =>
 			X[I] := X[I] - 2
 		end
 	end.
-
 main =>
 	X := [],
 	I := 0, 

@@ -1,6 +1,4 @@
-/*
-Example using table
-*/
+% Example using table
 
 table
 fib_table(N)=F =>

@@ -3,20 +3,14 @@ Qui possiamo vedere un esempio di due programmi uno scritto in PICAT, l'altro in
 \fi
 
 \begin{frame}[fragile, shrink=1]{PICAT vs Haskell - 2}
+	
 	Quicksort in Picat							
-	\begin{lstlisting}
-quicksort([]) = [].							
-quicksort([H|T]) = L ++ [H] ++ R => 		
-   L = quicksort([E : E in T, E <= H]),	
-   R = quicksort([E : E in T, E > H]).		
-	\end{lstlisting}
-\vspace{1cm}
+	\lstinputlisting{../examples/quicksort.pi}
+
+	\vspace{1cm}
+	
 	Quicksort in Haskell
-	\begin{lstlisting}
-quicksort [] = []
-quicksort (x:xs) = l ++ [x] ++ r
-   where l = quicksort [z | z <- xs, z <= x]
-         r = quicksort [z | z <- xs, z > x]
-	\end{lstlisting}
+	\lstinputlisting{../examples/quicksort.hs}
+
 \end{frame}
 

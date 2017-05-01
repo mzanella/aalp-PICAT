@@ -1,20 +1,23 @@
 \iffalse
 Della programmazione logica troviamo delle caratterisctiche tipiche come la possibilità di definire le relazioni, la possibilità di definire predicati e di farne backtracking (quindi abbiamo il non determinismo) ed infine è presente l'operatore di unificazione.
 
-*** AGGIUNGERE ESEMPI ***
+Per questo paradigma ho preparato tre esempi di utilizzo di PICAT
+1- il primo riguarda le relazioni, praticamente ho definito alcuni predicati e alcuni fatti e si può interrogare PICAT a vedere se certe sentenze sono vere o false
+2- il secondo esempio riguarda la definizione di predicati che utilizzano o meno il backtracking. Qui ho riscritto la funzione member, che è una funzione built-in che praticamente permette di dire che se un certo elemento appartiene ad una certa lista. La prima utilizza il backtracking e funziona mentre la seconda no
+3- il terzo esempio è un programma che calcola fibonacci con e senza l'utilizzo del tabling, effettuando una stampa ogni volta che si entra nella funzione. Le due funzioni sono identiche, tranne che una è preceduta dalla keyword table, che permette la memoizzazione mentre l'altra no. Come posssiamo vedere dall'output il numero di volte che si effettuano effettivamente dei calcoli nel caso in cui si utilizzi il tabling diminuisce notevolmente nel caso in cui la funzione venga richiamata più volte
 \fi
 
 \begin{frame}[fragile]{Programmazione logica}
 
 	\begin{itemize}
-		\item Regole per definire relazioni
-		\item Predicati
+		\item Regole per definire relazioni*
+		\item Predicati*
 			\begin{itemize}
 				\item Senza backtraking: \\\hspace{1cm} \texttt{Head, Cond $\Rightarrow$ Body}
 				\item Con backtracking: \\\hspace{1cm} \texttt{Head, Cond ?$\Rightarrow$ Body}
 			\end{itemize}
 		\item Operatore di unificazione
-		\item Tabling
+		\item Tabling*
 	\end{itemize}
 
 \end{frame}

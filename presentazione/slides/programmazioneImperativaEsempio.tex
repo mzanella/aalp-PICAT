@@ -5,25 +5,6 @@ Poi la lista viene riassegnata e ancora modificata con la funzione prova
 
 \begin{frame}[fragile, shrink=20]{Programmazione imperativa - Esempio}
 
-	\begin{lstlisting}
-% Example of imperative programming in Picat
-prova(X) =>
-	if (X.length <= 3) then
-		X[1] := -1
-	else
-		foreach (I in 1..X.length)
-			X[I] := X[I] - 2
-		end
-	end.
-main =>
-	X := [],
-	I := 0, 
-	while (I <= 5)
-		X := X ++ [I],
-		I := I + 1
-	end,
-	prova(X), println(X),
-	X := [1,2,3], prova(X), println(X).
-	\end{lstlisting}
-	
+	\lstinputlisting{../examples/imperativeProgramming.pi}
+
 \end{frame}

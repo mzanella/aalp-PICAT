@@ -1,8 +1,0 @@
-patriarch(X) ?=> X = 'Abraham'.
-son(Ishmael, Abraham, mother_is_slave) ?=>
-	Ishmael, Abraham, Mother_is_slave.
-
-freeborn(P,S) => 
-				patriarch(P), 
-				son(S,P,F),
-				F == mother_is_free.
