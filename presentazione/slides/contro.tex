@@ -1,0 +1,35 @@
+\iffalse
+PICAT presenta anche alcuni lati negativi dal mio punto di vista
+Prima non mi piace la scelta del dinamicamente tipato, dal momento è sconsigliato l'uso di side effects e poichè non è possibile definire nuovi tipi a mio avviso potrebbe aver senso avere un controllo da parte del compilatore dei tipi
+Una delle particolarità di PICAT è la possibilità di utilizzare le mappe globali. Queste possono essere sì utili ma un uso intesivo secondo me va contro una buona programmazione
+Se da un lato il fatto che prenda spunto da vari altri linguaggi di programmazione può essere un aiuto per iniziare dall'altro uno può chiedersi se serviva effettivamente un altro linguaggi di programmazione. Soprattutto quando si parla di programmazione logica, per esempio, questo linguaggio è veramente molto simile al prolog.
+Infine, un aspetto negativo che non è proprio del linguaggio ma ne è inevitabilmente collegato è che poichè non è molto conoscito come linguaggio si trova poco codice, poche informazioni, poche persono che lo utilizzano è questo è un problema se si vuole studiarlo a fondo
+\fi
+
+\begin{frame}{Contro}
+
+	\begin{columns}
+
+		\begin{column}{1\textwidth}
+
+			\begin{itemize}
+				\item Dinamicamente tipato
+				\item Non ha la possibilità di dichiarare variabili costanti anche se viene sconsigliato l'uso dei side effects
+				\item Global maps possono essere abusate facilmente rendendo inutile per esempio il passaggio dei parametr
+				\item Molto simile ad altri linguaggi di programmazione già esistenti
+				\item Scarsa documentazione e non esiste una comunità che lo utilizza
+			\end{itemize}
+
+		\end{column}
+
+		\begin{column}{0.1\textwidth}
+			\begin{figure}
+				\vspace*{-5cm}
+				\hspace*{-2cm}
+				\includegraphics[scale=0.3]{res/contro}
+			\end{figure}
+		\end{column}
+
+	\end{columns}
+
+\end{frame}

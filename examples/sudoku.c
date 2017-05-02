@@ -69,6 +69,16 @@ int main()
                       {0, 0, 4, 2, 0, 1, 0, 0, 0},
                       {3, 0, 0, 7, 0, 0, 6, 0, 0},
                       {0, 0, 0, 0, 0, 0, 0, 5, 0}};
+    for(i=1; i<10; ++i) {
+        for(j=1; j<10; ++j) {
+	    if (puzzle[i-1][j-1] == 0)            
+		printf("  _");
+            else
+	        printf("  %d", puzzle[i-1][j-1]);
+	}
+        printf("\n");
+    } 
+   
     t1 = clock();
     gettimeofday(&tv1, NULL);
     result = fillSudoku(puzzle, 0, 0);
@@ -78,12 +88,12 @@ int main()
     
     double user_time = (double)(tv2.tv_sec+tv2.tv_usec*1e-6 - (tv1.tv_sec+tv1.tv_usec*1e-6));
     double cpu_time = (double)(t2-t1) / CLOCKS_PER_SEC;
-
+    
     if(result) {
         printf("\n");
         for(i=1; i<10; ++i) {
             for(j=1; j<10; ++j) 
-                printf(" %d", puzzle[i-1][j-1]);
+                printf("  %d", puzzle[i-1][j-1]);
             printf("\n");
         }
         printf("\n");

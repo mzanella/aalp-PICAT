@@ -1,15 +1,6 @@
 /*
-
   Sudoku solver in Picat.
-
-  Some of the problem instances (and some idea) are from 
-  ECLiPSe's Sudoku model: 
-       http://eclipseclp.org/examples/sudoku.ecl.txt
-
-
-  Model created by Hakan Kjellerstrand, hakank@gmail.com
-  See also my Picat page: http://www.hakank.org/picat/
-
+  Model created by Hakan Kjellerstrand, http://www.hakank.org/picat/
 */
 
 import util.
@@ -31,12 +22,16 @@ sudoku(N, Board) =>
    N2 = N*N,
    Vars = Board.vars(),
    Vars :: 1..N2,
-   foreach(Row in Board) all_different(Row) end,
-   foreach(Column in transpose(Board)) all_different(Column) end,
+   foreach(Row in Board) 
+	all_different(Row) 
+   end,
+   foreach(Column in transpose(Board)) 
+	all_different(Column) 
+   end,
    foreach(I in 1..N..N2, J in 1..N..N2)
       all_different([Board[I+K,J+L] : K in 0..N-1, L in 0..N-1])
    end,
-   solve([ffd,down], Vars). % faster overall
+   solve([ffd,down], Vars).
 
 print_board(Board) =>
    N = Board.length,
