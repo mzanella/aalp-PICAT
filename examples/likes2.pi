@@ -1,0 +1,12 @@
+likes(mary, X), reptile(X) => false.
+likes(mary, X) => animal(X).
+
+index(+)
+animal(coccodrillo).
+animal(vipera).
+animal(cane).
+animal(cavallo).
+
+index(+)
+reptile(coccodrillo).
+reptile(vipera).

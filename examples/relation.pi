@@ -1,7 +1,9 @@
 likes(sam,Food) ?=> indian(Food),mild(Food).
-likes(sam,Food) ?=> chinese(Food).
+likes(sam,Food), chinese(Food) => false.
 likes(sam,Food) ?=> italian(Food).
 likes(sam,Food) ?=> Food = chips.
+
+likes(mary, Food) => chinese(Food).
 
 index(+)
 indian(curry).

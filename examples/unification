@@ -1,0 +1,9 @@
+X=1 			%bind
+
+$f(a,b) = $f(a,b) 	%test -> yes
+$f(a,c) = $f(a,b) 	%test -> no
+
+[H|T] = [a,b,c] 	%matching
+$f(X,Y) = $f(a,b) 	%matching
+
+$f(X,b) = $f(a,Y) 	%full unification
