@@ -10,13 +10,18 @@ Per questo paradigma ho preparato tre esempi di utilizzo di PICAT
 \begin{frame}[fragile]{Programmazione logica}
 
 	\begin{itemize}
-		\item Regole per definire relazioni*
 		\item Predicati*
 			\begin{itemize}
 				\item Senza backtraking: \\\hspace{1cm} \texttt{Head, Cond $\Rightarrow$ Body}
 				\item Con backtracking: \\\hspace{1cm} \texttt{Head, Cond ?$\Rightarrow$ Body}
 			\end{itemize}
-		\item Operatore di unificazione
+		\item Operatore di unificazione \\4 differenti comportamenti per \texttt{T1 = T2}
+			\begin{itemize}
+				\item T1 è una variabile;
+				\item T2 è una variabile;
+				\item T1 e T2 sono valori atomici;
+				\item T1 e T2 sono strutture;
+			\end{itemize}
 		\item Tabling*
 	\end{itemize}
 
